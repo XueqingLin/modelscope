@@ -1,7 +1,5 @@
 import os
 
-import json
-
 from modelscope.hub.api import HubApi
 from modelscope.hub.file_download import model_file_download
 from modelscope.hub.utils.utils import get_cache_dir
@@ -52,12 +50,38 @@ class ModelJsonTest:
 
 
 if __name__ == '__main__':
+    # task_model_map = {
+    #     "text-to-image-synthesis": [
+    #         "AI-ModelScope/stable-diffusion-v2-1"
+    #     ],
+    #     "face-detection": [
+    #         "damo/cv_resnet50_face-detection_retinaface"
+    #     ],
+    #     "face-recognition": [
+    #         "damo/cv_ir_face-recognition-ood_rts"
+    #     ],
+    #     "vision-efficient-tuning": [
+    #         "damo/cv_vitb16_classification_vision-efficient-tuning-lora"
+    #     ],
+    #     "video-single-object-tracking": [
+    #         "damo/cv_alex_video-single-object-tracking_siamfc-uav"
+    #     ],
+    #     "ocr-detection": [
+    #         "damo/cv_resnet18_ocr-detection-db-line-level_damo"
+    #     ]
+    # }
     model_list = [
-        'qwen/Qwen-7B-Chat-Int4',
-        'qwen/Qwen-14B-Chat-Int4',
-        'baichuan-inc/Baichuan2-7B-Chat-4bits',
-        'baichuan-inc/Baichuan2-13B-Chat-4bits',
-        'ZhipuAI/chatglm2-6b-int4',
+        # 'qwen/Qwen-7B-Chat-Int4',
+        # 'qwen/Qwen-14B-Chat-Int4',
+        # 'baichuan-inc/Baichuan2-7B-Chat-4bits',
+        # 'baichuan-inc/Baichuan2-13B-Chat-4bits',
+        # 'ZhipuAI/chatglm2-6b-int4',
+        # 'AI-ModelScope/stable-diffusion-v2-1',
+        'damo/cv_resnet50_face-detection_retinaface',
+        # 'damo/cv_ir_face-recognition-ood_rts',
+        # 'damo/cv_vitb16_classification_vision-efficient-tuning-lora',
+        # 'damo/cv_alex_video-single-object-tracking_siamfc-uav',
+        # 'damo/cv_resnet18_ocr-detection-db-line-level_damo'
     ]
     tester = ModelJsonTest()
     for model in model_list:

@@ -293,5 +293,35 @@
                 "军事"
             ]
         }
+    },
+    "text-to-image-synthesis": {
+        "input":{
+            "text":"archer style, a portrait painting of Johnny Depp"
+        }
+    },
+    "face-detection": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/retina_face_detection.jpg"
+        }
+    },
+    "face-recognition": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/face_recognition_1.png"
+        }
+    },
+    "vision-efficient-tuning": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/vision_efficient_tuning_test_1.png"
+        }
+    },
+    "video-single-object-tracking": {
+        "input":{
+            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/dog.avi"
+        }
+    },
+    "ocr-detection": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/ocr_detection.jpg"
+        }
     }
 }
