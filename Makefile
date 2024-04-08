@@ -23,3 +23,14 @@ whl:
 .PHONY: clean
 clean:
 	rm -rf  $(WHL_BUILD_DIR) $(DOC_BUILD_DIR)
+
+# 变量定义
+IMAGE_NAME = registry.cn-beijing.aliyuncs.com/modelscope-repo/modelscope:ubuntu22.04-cuda12.1.0-py310-torch2.1.2-tf2.14.0-1.13.1
+CONTAINER_NAME = modelscope-shell
+VOLUME_PATH = $(shell pwd)
+
+CMD ?= "pwd"
+
+# 'make shell' 命令的目标
+shell:
+	docker run --rm -it --network=host --name $(CONTAINER_NAME) -v $(VOLUME_PATH):/home/admin/modelscope $(IMAGE_NAME) /bin/bash
