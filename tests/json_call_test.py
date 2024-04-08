@@ -19,8 +19,10 @@ class ModelJsonTest:
     def test_single(self, model_id: str, model_revision=None):
         # get model_revision & task info
         cache_root = get_cache_dir()
+        print(f"cache_root is {cache_root}")
         configuration_file = os.path.join(cache_root, model_id,
                                           ModelFile.CONFIGURATION)
+        print(f"configuration_file is {configuration_file}")
         if not model_revision:
             model_revision = self.api.list_model_revisions(
                 model_id=model_id)[0]
@@ -31,7 +33,9 @@ class ModelJsonTest:
                 file_path=ModelFile.CONFIGURATION,
                 revision=model_revision)
         cfg = Config.from_file(configuration_file)
+        print(f"cfg is {cfg}")
         task = cfg.safe_get('task')
+        print(f"task is {task}, model is {model_id}, model_revision is {model_revision}")
 
         # init pipeline
         ppl = pipeline(
@@ -39,10 +43,14 @@ class ModelJsonTest:
             model=model_id,
             model_revision=model_revision,
             llm_first=True)
+
+        print(f"ppl is {ppl}")
         pipeline_info = get_pipeline_information_by_pipeline(ppl)
+        print(f"pipeline_info is {pipeline_info}")
 
         # call pipeline
         data = get_task_input_examples(task)
+        print(f"data is {data}")
 
         infer_result = call_pipeline_with_json(pipeline_info, ppl, data)
         result = pipeline_output_to_service_base64_output(task, infer_result)
@@ -86,6 +94,7 @@ if __name__ == '__main__':
     tester = ModelJsonTest()
     for model in model_list:
         try:
+            print(f"model is {model}")
             res = tester.test_single(model)
             print(
                 f'\nmodel_id {model} call_pipeline_with_json run ok. {res}\n\n\n\n'
