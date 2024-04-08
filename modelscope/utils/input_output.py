@@ -647,6 +647,7 @@ def call_pipeline_with_json(pipeline_info: PipelineInfomation,
     #     pipeline_inputs = body['input']
     #     result = pipeline(**pipeline_inputs)
     # else:
+    print(f"{pipeline_info} - {body}")
     pipeline_inputs, parameters = service_base64_input_to_pipeline_input(
         pipeline_info['task_name'], body)
     result = pipeline(pipeline_inputs, **parameters)
