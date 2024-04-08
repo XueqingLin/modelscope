@@ -1,10 +1,10 @@
 # Copyright (c) Alibaba, Inc. and its affiliates.
-from typing import TYPE_CHECKING
+# from typing import TYPE_CHECKING
 
 from modelscope.utils.import_utils import LazyImportModule
 from .utils.automodel_utils import fix_transformers_upgrade
 
-if TYPE_CHECKING:
+if False:
     from .exporters import Exporter, TfModelExporter, TorchModelExporter
     from .hub.api import HubApi
     from .hub.check_model import check_local_model_is_latest, check_model_is_id
