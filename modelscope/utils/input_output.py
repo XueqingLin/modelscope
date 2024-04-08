@@ -823,9 +823,13 @@ def pipeline_output_to_service_base64_output(task_name, pipeline_output):
 
 
 def get_task_input_examples(task):
+    print(f"start to get_task_input_examples for {task}")
     current_work_dir = os.path.dirname(__file__)
+    print(f"current_work_dir is {current_work_dir}")
     with open(current_work_dir + '/pipeline_inputs.json', 'r') as f:
         input_examples = json.load(f)
+
+    print(f"input_example is {input_examples}")
     if task in input_examples:
         return input_examples[task]
     return None
