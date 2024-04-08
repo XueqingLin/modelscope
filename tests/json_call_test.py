@@ -85,6 +85,7 @@ if __name__ == '__main__':
         # 'baichuan-inc/Baichuan2-13B-Chat-4bits',
         # 'ZhipuAI/chatglm2-6b-int4',
         # 'AI-ModelScope/stable-diffusion-v2-1',
+        'ZhipuAI/chatglm2-6b',
         'damo/cv_resnet50_face-detection_retinaface',
         # 'damo/cv_ir_face-recognition-ood_rts',
         # 'damo/cv_vitb16_classification_vision-efficient-tuning-lora',
