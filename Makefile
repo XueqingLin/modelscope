@@ -33,4 +33,6 @@ CMD ?= "pwd"
 
 # 'make shell' 命令的目标
 shell:
-	docker run --rm -it --network=host --name $(CONTAINER_NAME) -v $(VOLUME_PATH):/home/admin/modelscope $(IMAGE_NAME) /bin/bash
+	docker run --rm -it --network=host --runtime nvidia --gpus all \
+    -v ~/.cache/modelscope/hub:/root/.cache/modelscope/hub \
+    --name $(CONTAINER_NAME) -v $(VOLUME_PATH):/home/admin/modelscope $(IMAGE_NAME) /bin/bash
