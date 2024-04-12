@@ -85,12 +85,12 @@ if __name__ == '__main__':
         # 'baichuan-inc/Baichuan2-13B-Chat-4bits',
         # 'ZhipuAI/chatglm2-6b-int4',
         # 'AI-ModelScope/stable-diffusion-v2-1',
-        'ZhipuAI/chatglm2-6b',
+        # 'ZhipuAI/chatglm2-6b',
         'damo/cv_resnet50_face-detection_retinaface',
-        # 'damo/cv_ir_face-recognition-ood_rts',
-        # 'damo/cv_vitb16_classification_vision-efficient-tuning-lora',
-        # 'damo/cv_alex_video-single-object-tracking_siamfc-uav',
-        # 'damo/cv_resnet18_ocr-detection-db-line-level_damo'
+        'damo/cv_ir_face-recognition-ood_rts',
+        'damo/cv_vitb16_classification_vision-efficient-tuning-lora',
+        'damo/cv_alex_video-single-object-tracking_siamfc-uav',
+        'damo/cv_resnet18_ocr-detection-db-line-level_damo'
     ]
     tester = ModelJsonTest()
     for model in model_list:
