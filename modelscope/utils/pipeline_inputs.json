@@ -315,13 +315,164 @@
         }
     },
     "video-single-object-tracking": {
-        "input":{
-            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/dog.avi"
-        }
+        "input": [
+            "https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/dog.avi",
+            [414, 343, 514, 449]
+        ]
     },
     "ocr-detection": {
         "input":{
             "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/ocr_detection.jpg"
+        }
+    },
+    "face-reconstruction": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/face_reconstruction.jpg"
+        }
+    },
+    "image-inpainting": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_1.png",
+            "mask": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_mask_1.png"
+        }
+    },
+    "image-skychange": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_1.png",
+            "mask": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_mask_1.png"
+        }
+    },
+    "image-deblurring": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/GOPR0384_11_00-000001.png"
+        }
+    },
+    "video-frame-interpolation":{
+        "input":{
+            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/video_frame_interpolation_test.mp4"
+        }
+    },
+    "image-quality-assessment-mos": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/dogs.jpg"
+        }
+    },
+    "image-driving-perception": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/dogs.jpg"
+        }
+    },
+    "image-quality-assessment-degradation": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/dogs.jpg"
+        }
+    },
+    "bad-image-detecting": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/dogs.jpg"
+        }
+    },
+    "video-object-detection":{
+        "input":{
+            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/test_realtime_vod.mp4"
+        }
+    },
+    "video-deinterlace":{
+        "input":{
+            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/video_deinterlace_test.mp4"
+        }
+    },
+    "image-to-video": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/dogs.jpg"
+        }
+    },
+    "video-to-video": {
+        "input":{
+            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/video_frame_interpolation_test.mp4",
+            "text":"archer style, a portrait painting of Johnny Depp"
+        }
+    },
+    "face-quality-assessment": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/face_recognition_1.png"
+        }
+    },
+    "human-reconstruction": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/human_reconstruction.jpg"
+        }
+    },
+    "image-paintbyexample": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/image/example_1.png",
+            "mask": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/mask/example_1.png",
+            "reference":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/reference/example_1.jpg"
+        }
+    },
+    "image_variation_task": {
+        "input":{
+            "image":"https://vision-poster.oss-cn-shanghai.aliyuncs.com/lllcho.lc/data/test_data/sunset-landscape-sky-colorful-preview.jpg"
+        }
+    },
+    "video-super-resolution": {
+        "input":{
+            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/000.mp4"
+        }
+    },
+    "image-super-resolution": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/dogs.jpg"
+        }
+    },
+    "image-super-resolution-pasd": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/dogs.jpg"
+        }
+    },
+    "head-reconstruction": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/face_reconstruction.jpg"
+        }
+    },
+    "face_fusion_torch": {
+        "input":{
+            "template":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/facefusion_template.jpg",
+            "user": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/facefusion_user.jpg"
+        }
+    },
+    "video-temporal-grounding": {
+        "input":{
+            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/video_frame_interpolation_test.mp4",
+            "text":"a man takes food out of the refrigerator."
+        }
+    },
+    "image-try-on": {
+        "input": {
+            "person_input_path": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/image/example_1.png",
+            "garment_input_path": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/reference/example_1.jpg",
+            "mask_input_path": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/mask/example_1.png"
+        }
+    },
+    "video-text-retrieval": {
+        "input":{
+            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/video_frame_interpolation_test.mp4",
+            "text":"a man takes food out of the refrigerator."
+        }
+    },
+    "face-liveness": {
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/face_liveness_ir.jpg"
+        }
+    },
+    "image-color-enhancement":{
+        "input":{
+            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_color_enhance.png"
+        }
+    },
+    "video-object-segmentation": {
+        "input":{
+            "video":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/videos/referring_video_object_segmentation_test_video.mp4"
         }
     }
 }
