@@ -87,54 +87,55 @@ if __name__ == '__main__':
         # 'AI-ModelScope/stable-diffusion-v2-1',
         # 'ZhipuAI/chatglm2-6b',
 
-        # face-detection
-        'damo/cv_manual_face-detection_tinymog',
-        'damo/cv_ddsar_face-detection_iclr23-damofd',
-        'damo/cv_ddsar_face-detection_iclr23-damofd-34G',
-        'damo/cv_ddsar_face-detection_iclr23-damofd-2.5G',
-        'damo/cv_ddsar_face-detection_iclr23-damofd-10G',
-        'damo/cv_manual_uav-detection_uav',
-        'damo/cv_resnet50_face-detection_retinaface',
-        'damo/cv_resnet_facedetection_scrfd10gkps',
-        'damo/cv_resnet101_face-detection_cvpr22papermogface',
-        'damo/cv_manual_face-detection_mtcnn',
-        'damo/cv_manual_face-detection_ulfd',
-
-        # face-recognition
-        'damo/cv_ir_face-recognition-ood_rts',
-        'damo/cv_vit_face-recognition',
-        'damo/cv_manual_face-recognition_frir',
-        'damo/cv_manual_face-recognition_frfm',
-        'damo/cv_ir101_facerecognition_cfglint',
-        'damo/cv_ir50_face-recognition_arcface',
-        'damo/cv_resnet_face-recognition_facemask',
-
-        # vision-efficient-tuning
-        'damo/cv_vitb16_classification_vision-efficient-tuning-utuning',
-        'damo/cv_vitb16_classification_vision-efficient-tuning-lora',
-        'damo/cv_vitb16_classification_vision-efficient-tuning-prompt',
-        'damo/cv_vitb16_classification_vision-efficient-tuning-adapter',
-        'damo/cv_vitb16_classification_vision-efficient-tuning-prefix',
-        'damo/cv_vitb16_classification_vision-efficient-tuning-sidetuning',
-        'damo/cv_vitb16_classification_vision-efficient-tuning-bitfit',
-        'damo/cv_vitb16_classification_vision-efficient-tuning-base',
-
-        # ocr-detection
-        'damo/cv_resnet18_ocr-detection-db-line-level_damo',
-        'damo/cv_resnet18_ocr-detection-line-level_damo',
-        'damo/cv_resnet18_ocr-detection-word-level_damo',
-        'damo/cv_proxylessnas_ocr-detection-db-line-level_damo',
-        'damo/cv_resnet50_ocr-detection-vlpt',
-
-        # video-single-object-tracking
-        'damo/cv_vitb_video-single-object-tracking_ostrack-uav-l',
-        'damo/cv_vitb_video-single-object-tracking_ostrack-l',
-        'damo/cv_alex_video-single-object-tracking_siamfc-uav',
-        'damo/cv_alex_video-single-object-tracking_siamfc-uav',
-        'damo/cv_vitb_video-single-object-tracking_procontext',
-        'damo/cv_vitb_video-single-object-tracking_ostrack',
+        # # face-detection
+        # 'damo/cv_manual_face-detection_tinymog',
+        # 'damo/cv_ddsar_face-detection_iclr23-damofd',
+        # 'damo/cv_ddsar_face-detection_iclr23-damofd-34G',
+        # 'damo/cv_ddsar_face-detection_iclr23-damofd-2.5G',
+        # 'damo/cv_ddsar_face-detection_iclr23-damofd-10G',
+        # 'damo/cv_manual_uav-detection_uav',
+        # 'damo/cv_resnet50_face-detection_retinaface',
+        # 'damo/cv_resnet_facedetection_scrfd10gkps',
+        # 'damo/cv_resnet101_face-detection_cvpr22papermogface',
+        # 'damo/cv_manual_face-detection_mtcnn',
+        # 'damo/cv_manual_face-detection_ulfd',
+        #
+        # # face-recognition
+        # 'damo/cv_ir_face-recognition-ood_rts',
+        # 'damo/cv_vit_face-recognition',
+        # 'damo/cv_manual_face-recognition_frir',
+        # 'damo/cv_manual_face-recognition_frfm',
+        # 'damo/cv_ir101_facerecognition_cfglint',
+        # 'damo/cv_ir50_face-recognition_arcface',
+        # 'damo/cv_resnet_face-recognition_facemask',
+        #
+        # # vision-efficient-tuning
+        # 'damo/cv_vitb16_classification_vision-efficient-tuning-utuning',
+        # 'damo/cv_vitb16_classification_vision-efficient-tuning-lora',
+        # 'damo/cv_vitb16_classification_vision-efficient-tuning-prompt',
+        # 'damo/cv_vitb16_classification_vision-efficient-tuning-adapter',
+        # 'damo/cv_vitb16_classification_vision-efficient-tuning-prefix',
+        # 'damo/cv_vitb16_classification_vision-efficient-tuning-sidetuning',
+        # 'damo/cv_vitb16_classification_vision-efficient-tuning-bitfit',
+        # 'damo/cv_vitb16_classification_vision-efficient-tuning-base',
+        #
+        # # ocr-detection
+        # 'damo/cv_resnet18_ocr-detection-db-line-level_damo',
+        # 'damo/cv_resnet18_ocr-detection-line-level_damo',
+        # 'damo/cv_resnet18_ocr-detection-word-level_damo',
+        # 'damo/cv_proxylessnas_ocr-detection-db-line-level_damo',
+        # 'damo/cv_resnet50_ocr-detection-vlpt',
+        #
+        # # video-single-object-tracking
+        # 'damo/cv_vitb_video-single-object-tracking_ostrack-uav-l',
+        # 'damo/cv_vitb_video-single-object-tracking_ostrack-l',
+        # 'damo/cv_alex_video-single-object-tracking_siamfc-uav',
+        # 'damo/cv_alex_video-single-object-tracking_siamfc-uav',
+        # 'damo/cv_vitb_video-single-object-tracking_procontext',
+        # 'damo/cv_vitb_video-single-object-tracking_ostrack',
 
         # face-reconstruction
+        # run to here
         'damo/cv_resnet50_face-reconstruction',
 
         # image-inpainting
