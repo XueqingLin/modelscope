@@ -829,7 +829,7 @@ def get_task_input_examples(task):
     with open(current_work_dir + '/pipeline_inputs.json', 'r') as f:
         input_examples = json.load(f)
 
-    print(f"input_example is {input_examples}")
+    # print(f"input_example is {input_examples}")
     if task in input_examples:
         return input_examples[task]
     return None

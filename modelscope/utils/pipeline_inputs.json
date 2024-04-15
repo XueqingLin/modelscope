@@ -332,14 +332,14 @@
     },
     "image-inpainting": {
         "input":{
-            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_1.png",
+            "img":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_1.png",
             "mask": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_mask_1.png"
         }
     },
     "image-skychange": {
         "input":{
-            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_1.png",
-            "mask": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_mask_1.png"
+            "sky_image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_1.png",
+            "scene_image": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_inpainting/image_inpainting_mask_1.png"
         }
     },
     "image-deblurring": {
@@ -405,7 +405,7 @@
     },
     "image-paintbyexample": {
         "input":{
-            "image":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/image/example_1.png",
+            "img":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/image/example_1.png",
             "mask": "https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/mask/example_1.png",
             "reference":"https://modelscope.oss-cn-beijing.aliyuncs.com/test/images/image_paint_by_example/reference/example_1.jpg"
         }
