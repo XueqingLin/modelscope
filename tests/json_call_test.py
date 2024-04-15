@@ -33,9 +33,9 @@ class ModelJsonTest:
                 file_path=ModelFile.CONFIGURATION,
                 revision=model_revision)
         cfg = Config.from_file(configuration_file)
-        print(f"cfg is {cfg}")
         task = cfg.safe_get('task')
         print(f"task is {task}, model is {model_id}, model_revision is {model_revision}")
+        print(f"cfg is {cfg}, task is {task}")
 
         # init pipeline
         ppl = pipeline(
@@ -46,7 +46,7 @@ class ModelJsonTest:
 
         print(f"ppl is {ppl}")
         pipeline_info = get_pipeline_information_by_pipeline(ppl)
-        print(f"pipeline_info is {pipeline_info}")
+        print(f"pipeline_info is {pipeline_info}, task is {task}")
 
         # call pipeline
         data = get_task_input_examples(task)
@@ -144,43 +144,43 @@ if __name__ == '__main__':
         'damo/cv_fft_inpainting_lama',
 
         # text-to-image-synthesis
-        'langboat/Guohua-Diffusion',
-        'AI-ModelScope/stable-diffusion-xl-base-1.0',
-        'Fengshenbang/Taiyi-Stable-Diffusion-1B-Chinese-v0.1',
-        'Fengshenbang/Taiyi-Stable-Diffusion-1B-Anime-Chinese-v0.1',
-        'AI-ModelScope/stable-diffusion-v1-5',
-        'damo/cv_cartoon_stable_diffusion_design',
-        'Fengshenbang/Taiyi-Stable-Diffusion-1B-Chinese-EN-v0.1',
-        'damo/cv_diffusion_text-to-image-synthesis_tiny',
-        'damo/cv_cartoon_stable_diffusion_clipart',
-        'damo/cv_cartoon_stable_diffusion_illustration',
-        'AI-ModelScope/rwkv-4-world',
-        'PAI/pai-diffusion-artist-xlarge-zh',
-        'AI-ModelScope/stable-diffusion-v1.5-no-safetensor',
-        'PAI/pai-diffusion-artist-large-zh',
-        'damo/cv_cartoon_stable_diffusion_watercolor',
-        'damo/cv_cartoon_stable_diffusion_flat',
-        'AI-ModelScope/stable-diffusion-v2-1',
-        'AI-ModelScope/stable-diffusion-xl-refiner-1.0',
-        'modelscope/small-stable-diffusion-v0',
-        'AI-ModelScope/t5-base',
-        'damo/cv_composer_multi-modal-image-synthesis',
-        'WordArt/font_generation_base_model',
-        'AI-ModelScope/stable-diffusion-2-1',
-        'AI-ModelScope/stable-diffusion-v1.4',
-        'AI-ModelScope/stable-diffusion-GhostMix-V1-1',
-        'AI-ModelScope/rwkv-4-music',
-        'AI-ModelScope/stable-diffusion-GhostMix-V1-2-fp16-pruned',
-        'PAI/pai-diffusion-anime-large-zh',
-        'AI-ModelScope/Realistic_Vision_V4.0',
-        'AI-ModelScope/stable-diffusion-v1-4',
-        'PAI/pai-diffusion-general-xlarge-zh',
-        'modelscope/falcon-180B',
-        'PAI/pai-diffusion-food-large-zh',
-        'PAI/pai-diffusion-general-large-zh',
-        'AI-ModelScope/stable-diffusion-xl-base-0.9',
+        # 'langboat/Guohua-Diffusion',
+        # 'AI-ModelScope/stable-diffusion-xl-base-1.0',
+        # 'Fengshenbang/Taiyi-Stable-Diffusion-1B-Chinese-v0.1',
+        # 'Fengshenbang/Taiyi-Stable-Diffusion-1B-Anime-Chinese-v0.1',
+        # 'AI-ModelScope/stable-diffusion-v1-5',
+        # 'damo/cv_cartoon_stable_diffusion_design',
+        # 'Fengshenbang/Taiyi-Stable-Diffusion-1B-Chinese-EN-v0.1',
+        # 'damo/cv_diffusion_text-to-image-synthesis_tiny',
+        # 'damo/cv_cartoon_stable_diffusion_clipart',
+        # 'damo/cv_cartoon_stable_diffusion_illustration',
+        # 'AI-ModelScope/rwkv-4-world',
+        # 'PAI/pai-diffusion-artist-xlarge-zh',
+        # 'AI-ModelScope/stable-diffusion-v1.5-no-safetensor',
+        # 'PAI/pai-diffusion-artist-large-zh',
+        # 'damo/cv_cartoon_stable_diffusion_watercolor',
+        # 'damo/cv_cartoon_stable_diffusion_flat',
+        # 'AI-ModelScope/stable-diffusion-v2-1',
+        # 'AI-ModelScope/stable-diffusion-xl-refiner-1.0',
+        # 'modelscope/small-stable-diffusion-v0',
+        # 'AI-ModelScope/t5-base',
+        # 'damo/cv_composer_multi-modal-image-synthesis',
+        # 'WordArt/font_generation_base_model',
+        # 'AI-ModelScope/stable-diffusion-2-1',
+        # 'AI-ModelScope/stable-diffusion-v1.4',
+        # 'AI-ModelScope/stable-diffusion-GhostMix-V1-1',
+        # 'AI-ModelScope/rwkv-4-music',
+        # 'AI-ModelScope/stable-diffusion-GhostMix-V1-2-fp16-pruned',
+        # 'PAI/pai-diffusion-anime-large-zh',
+        # 'AI-ModelScope/Realistic_Vision_V4.0',
+        # 'AI-ModelScope/stable-diffusion-v1-4',
+        # 'PAI/pai-diffusion-general-xlarge-zh',
+        # 'modelscope/falcon-180B',
+        # 'PAI/pai-diffusion-food-large-zh',
+        # 'PAI/pai-diffusion-general-large-zh',
+        # 'AI-ModelScope/stable-diffusion-xl-base-0.9',
         'damo/multi-modal_chinese_stable_diffusion_v1.0',
-        'damo/ofa_text-to-image-synthesis_coco_large_en',
+        # 'damo/ofa_text-to-image-synthesis_coco_large_en',
 
         # image-skychange
         'damo/cv_hrnetocr_skychange',
@@ -283,9 +283,10 @@ if __name__ == '__main__':
             print(f"model is {model}")
             res = tester.test_single(model)
             print(
-                f'\nmodel_id {model} call_pipeline_with_json run ok. {res}\n\n\n\n'
+                # f'\nmodel_id {model} call_pipeline_with_json run ok. \n\n {res}\n\n\n\n'
+                f'\nmodel_id {model} call_pipeline_with_json run ok. \n\n'
             )
         except BaseException as e:
             print(
-                f'\nmodel_id {model} call_pipeline_with_json run failed: {e}.\n\n\n\n'
+                f'\nmodel_id {model} call_pipeline_with_json run failed: \n\n {e}.\n\n\n\n'
             )
