@@ -1,0 +1,17 @@
+FROM registry.cn-beijing.aliyuncs.com/modelscope-repo/modelscope:ubuntu20.04-cuda11.8.0-py38-torch2.0.1-tf2.13.0-1.9.5
+
+MAINTAINER luoxue.lxq@alibaba-inc.com
+
+# 设置工作目录为 /home/admin/modelscope-ut-on-fc
+WORKDIR /home/admin/modelscope-ut-on-fc
+
+# 将当前目录下所有文件和子目录复制到容器中的/home/admin/modelscope-ut-on-fc下
+COPY ./ ./
+
+# 使用 pip 安装 requirements.txt 中列出的所有依赖项
+Run pip install -r ./requirements_fc.txt
+
+ENV PYTHONPATH /home/admin/modelscope-ut-on-fc
+
+CMD [ "python3", "-u", "/home/admin/modelscope-ut-on-fc/fc_app.py" ]
+EXPOSE 9000
